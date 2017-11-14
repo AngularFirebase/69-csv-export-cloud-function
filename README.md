@@ -1,4 +1,4 @@
-# Episode XY
+# Episode 69 - Export Firestore to CSV with a Cloud Function
 
 Watch the [screencast]()
 

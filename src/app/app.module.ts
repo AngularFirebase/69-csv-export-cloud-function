@@ -10,17 +10,22 @@ import { environment } from '../environments/environment';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 
+import { FormsModule } from '@angular/forms';
+
 /// DELETE firebaseConfig
 /// Add your own firebase config to environment.ts
 /// Then use it to initialize angularfire2 AngularFireModule.initializeApp(environment.firebaseConfig),
-import { firebaseConfig } from '../env'; 
+import { firebaseConfig } from '../env';
+import { ReportLinkComponent } from './report-link/report-link.component'; 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ReportLinkComponent
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule,
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFirestoreModule,
