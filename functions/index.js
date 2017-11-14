@@ -8,7 +8,7 @@ const gcs = require('@google-cloud/storage')();
 const path = require('path');
 const os = require('os');
 
-var json2csv = require('json2csv');
+const json2csv = require('json2csv');
 
 
 
