@@ -14,11 +14,11 @@ const json2csv = require('json2csv');
 
 exports.createCSV = functions.firestore
     .document('reports/{reportId}')
-    .onCreate(event => {
+    .onCreate((snapshot, context)  => {
 
         // Step 1. Set main variables
 
-        const reportId = event.params.reportId;
+        const reportId = context.params.reportId;
         const fileName = `reports/${reportId}.csv`;
         const tempFilePath = path.join(os.tmpdir(), fileName);
         
